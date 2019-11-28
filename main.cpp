@@ -39,16 +39,17 @@ int main()
     cout << a << " + " << b << " = " << c << endl;
 
     cout << a << " * " << b << " = " << d << endl;
+    cout << "==========================" << endl;
 
     /*if(a > b)
         cout << "a est plus grand que b." << endl;
-    else *//*   if(a==b)
+    else */   if(a==b)
         cout << "a est egal a b." << endl;
     else
-        cout << "a est plus petit que b." << endl;*/
+        cout << "a est plus petit que b." << endl;
 
 
-    cout << "result of addition a + b = " << c << endl;
+
 
     return 0;
 }

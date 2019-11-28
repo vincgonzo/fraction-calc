@@ -74,34 +74,25 @@ Vfraction::cNumerator(Vfraction const &b) const
 {
 
 }*/
-/*
+
 bool Vfraction::isEgal(Vfraction const &b) const
 {
-    if(m_denominator != b.m_denominator)
-    {
-
-    }
     return (m_numerator == b.m_numerator && m_denominator == b.m_denominator);
-}*/
+}
 
 
 // == Operator ==
-/*
-Vfraction operator*(const Vfraction &a, const Vfraction &b)
+
+
+bool operator==(Vfraction const& a, Vfraction const& b)
 {
-    Vfraction.multiplication();
-    return Vfraction(int a, int b);
+   return a.isEgal(b);
 }
 
-bool operator<(Vfraction const &a, Vfraction const &b)
+bool operator!=(Vfraction const& a, Vfraction const& b)
 {
-    return a.lessThen(b);
+   return !(a.isEgal(b));   //Souvenez-vous du ! qui veut dire "NON"
 }
-bool operator==(Vfraction const &a, Vfraction const &b)
-{
-    //return a.isEgal(b);
-}
-*/
 
 // Functions ======================
 int pgcd(int a, int b)

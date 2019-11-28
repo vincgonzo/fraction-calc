@@ -11,7 +11,7 @@ class Vfraction
     Vfraction();
     Vfraction(int Num, int Den);
     Vfraction(int Num);
-    isEgal(Vfraction &b) const;
+    bool isEgal(Vfraction const &b) const;
     void display(std::ostream &flux) const;
     void simpleF();
 
@@ -25,6 +25,7 @@ class Vfraction
 };
 
 bool operator==(Vfraction const &a, Vfraction const &b);
+bool operator!=(Vfraction const& a, Vfraction const& b);
 int pgcd(int a, int b);
 
 Vfraction operator+(const Vfraction& a, const Vfraction &b);
