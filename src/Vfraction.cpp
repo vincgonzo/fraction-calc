@@ -80,9 +80,32 @@ bool Vfraction::isEgal(Vfraction const &b) const
     return (m_numerator == b.m_numerator && m_denominator == b.m_denominator);
 }
 
+bool Vfraction::estPlusPetitQue(Vfraction const& autre) const
+{
+    return (m_numerator * autre.m_denominator < m_denominator * autre.m_numerator);
+}
 
 // == Operator ==
 
+bool operator<(Vfraction const& a, Vfraction const& b) //Vrai si a<b donc si a est plus petit que b
+{
+    return a.estPlusPetitQue(b);
+}
+
+bool operator>(Vfraction const& a, Vfraction const& b) //Vrai si a>b donc si b est plus petit que a
+{
+    return b.estPlusPetitQue(a);
+}
+
+bool operator<=(Vfraction const& a, Vfraction const& b) //Vrai si a<=b donc si b n'est pas plus petit que a
+{
+    return !(b.estPlusPetitQue(a));
+}
+
+bool operator>=(Vfraction const& a, Vfraction const& b) //Vrai si a>=b donc si a n'est pas plus petit que b
+{
+    return !(a.estPlusPetitQue(b));
+}
 
 bool operator==(Vfraction const& a, Vfraction const& b)
 {
