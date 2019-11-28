@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1574939780 source:c:\xampp\htdocs\c-cplusplus\c++\fraction-calc\main.cpp
+	<iostream>
+	<numeric>
+	<string>
+	"src/Vfraction.h"
+
+1574939722 c:\xampp\htdocs\c-cplusplus\c++\fraction-calc\src\vfraction.h
+	<iostream>
+	<string>
+
+1574939642 source:c:\xampp\htdocs\c-cplusplus\c++\fraction-calc\src\vfraction.cpp
+	"Vfraction.h"
+
