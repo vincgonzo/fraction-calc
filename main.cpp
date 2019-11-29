@@ -27,9 +27,13 @@ int lcm(int a, int b)
 int main()
 {
 
-    Vfraction a(15,5);      //Déclare une fraction valant 4/5
+    Vfraction a(7,8);      //Déclare une fraction valant 4/5
     Vfraction b(2);        //Déclare une fraction valant 2/1 (ce qui vaut 2)
     Vfraction c,d;         //Déclare deux fractions valant 0
+    cout << a << endl;
+
+    cout << a.fractionToNbr() << endl;
+    cout << b << endl;
 
     c = a+b;               //Calcule 4/5 + 2/1 = 14/5
 

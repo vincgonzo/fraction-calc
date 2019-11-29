@@ -3,22 +3,35 @@
 using namespace std;
 
 // Constructor =================
-Vfraction::Vfraction(): m_numerator(0), m_denominator(1)
-{
-}
+
 Vfraction::Vfraction(int Num, int Den) : m_numerator(Num), m_denominator(Den)
 {
+    //simpleF();
 }
 
-Vfraction::Vfraction(int Num) : m_numerator(Num), m_denominator(1)
-{
-}
 
 // Methods =====================
 void Vfraction::simpleF()
 {
     int cNb = pgcd(m_numerator, m_denominator);
-    cout << m_numerator/cNb << '/' << m_denominator/cNb << endl;
+
+    m_numerator/=cNb;
+    m_denominator/=cNb;
+}
+
+double Vfraction::fractionToNbr()
+{
+    return double(m_numerator) / double(m_denominator);
+}
+
+int Vfraction::getNum() const
+{
+    return m_numerator;
+}
+
+int Vfraction::getDen() const
+{
+    return m_denominator;
 }
 
 void Vfraction::display(ostream &flux) const
@@ -48,6 +61,7 @@ Vfraction& Vfraction::operator+=(Vfraction const& other)
     m_numerator = other.m_denominator * m_numerator + m_denominator * other.m_numerator;
     m_denominator = m_denominator * other.m_denominator;
 
+    simpleF();
     return *this;
 }
 
@@ -63,6 +77,7 @@ Vfraction& Vfraction::operator*=(Vfraction const& autre)
     m_numerator *= autre.m_numerator;
     m_denominator *= autre.m_denominator;
 
+    simpleF();
     return *this;
 }
 

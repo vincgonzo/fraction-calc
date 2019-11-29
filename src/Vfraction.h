@@ -8,13 +8,16 @@ class Vfraction
 {
     public:
 
-    Vfraction();
-    Vfraction(int Num, int Den);
-    Vfraction(int Num);
-    bool isEgal(Vfraction const &b) const;
-    void display(std::ostream &flux) const;
+
+    Vfraction(int Num = 0, int Den = 1);
     void simpleF();
     bool estPlusPetitQue(Vfraction const& autre) const;
+    bool isEgal(Vfraction const &b) const;
+    void display(std::ostream &flux) const;
+    int getNum() const;
+    int getDen() const;
+    double fractionToNbr();
+
 
     Vfraction& operator+=(Vfraction const& other);
     Vfraction& operator*=(Vfraction const& autre);
